@@ -116,10 +116,9 @@ def load_game(user_name):
                 # the repeat menu function imorted from Utils file.
                 if game:
                     add_score(lvl_sel)
-                    transfer_and_clear_file("./Scores/Scores.txt", "./Scores/Last_scores.txt")
                     Screen_cleaner()
 
-                repeat_menu(user_name, lvl_sel, prev_game=game_module, prev_difficulty=lvl_sel)
+                repeat_menu(user_name, lvl_sel, prev_game = game_module, prev_difficulty = lvl_sel)
 
 
 

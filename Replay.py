@@ -1,6 +1,7 @@
 import importlib
 import Livetests
-from Utils import Screen_cleaner, transfer_and_clear_file, SCORES_FILE_NAME
+from Utils import Screen_cleaner, transfer_and_clear_file
+
 def repeat_menu(user_name, lvl_sel, prev_game=None, prev_difficulty=None):
     while True:
         repeat = input("""Do you want to PLAY AGAIN the SAME GAME with the SAME DIFFICULTY, 
@@ -30,11 +31,12 @@ def repeat_menu(user_name, lvl_sel, prev_game=None, prev_difficulty=None):
 
         elif repeat.lower().startswith('n'):
             Screen_cleaner()
+            transfer_and_clear_file("./Scores/Scores.txt", "./Scores/Last_scores.txt")
             Livetests.load_game(user_name)
 
         elif repeat.lower().startswith('q'):
             print(f"Was nice to see you {user_name}!!! Thanks for playing my game, see you next time!")
-            transfer_and_clear_file(SCORES_FILE_NAME, 'last_scores.txt')
+            transfer_and_clear_file("./Scores/Scores.txt", "./Scores/Last_scores.txt")
             Screen_cleaner()
             exit()
 

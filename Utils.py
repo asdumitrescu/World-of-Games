@@ -3,10 +3,12 @@ import os
 import time
 
 
-SCORES_FILE_NAME = "Scores.txt"
-
+SCORES_FILE_NAME = "./Scores/Scores.txt"
+SCORES_FILE_FLASK = "./Scores.txt"
+LAST_SCORES = "./Scores/Last_scores.txt"
+LAST_SCORES_FLASK = "./Last_scores.txt"
 BAD_RETURN_CODE = "ERROR CODE 214"
-LAST_SCORES = "Last_scores.txt"
+
 
 
 
