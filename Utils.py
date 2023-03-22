@@ -9,6 +9,7 @@ LAST_SCORES = "./Scores/Last_scores.txt"
 LAST_SCORES_FLASK = "./Last_scores.txt"
 BAD_RETURN_CODE = "ERROR CODE 214"
 
+
 # This function waits for 0.7 seconds and clears the screen based on the OS being used
 def Screen_cleaner():
     time.sleep(0.7)

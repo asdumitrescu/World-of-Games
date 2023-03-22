@@ -36,7 +36,7 @@ def repeat_menu(user_name, lvl_sel, prev_game=None, prev_difficulty=None):
 
         elif repeat.lower().startswith('n'): # check if the user input starts with 'n' (choose another game)
             Screen_cleaner() # clear the screen again
-            transfer_and_clear_file("./Scores/Scores.txt", "./Scores/Last_scores.txt") # for when the user will choose n for another game the function for clear the scores will be called and will also save the score to another file for the flask app localhost/last_score
+            # transfer_and_clear_file("./Scores/Scores.txt", "./Scores/Last_scores.txt") # for when the user will choose n for another game the function for clear the scores will be called and will also save the score to another file for the flask app localhost/last_score
             Livetests.load_game(user_name) # this will call the function load_game from the Livetests module to start another game from the beginning
 
         elif repeat.lower().startswith('q'):  # check if the user input starts with 'q' to quit the game
