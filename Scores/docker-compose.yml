@@ -15,6 +15,6 @@ services:
 
     environment:
       - FLASK_APP=MainScores.py
-      - FLASK_RUN_HOST=127.0.0.1
-    command: ["flask", "run"]
-
+      - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_RUN_PORT=5000
+    command: [ "flask", "run", "--host=0.0.0.0", "--port=5000" ]
