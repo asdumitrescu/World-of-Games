@@ -14,7 +14,7 @@ pipeline {
             steps {
                 dir('Scores') {
                     sh 'docker-compose up -d'
-                    sleep(time: 10, unit: 'SECONDS')
+
                 }
             }
         }
