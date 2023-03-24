@@ -24,7 +24,7 @@ def test_scores_service(app_url):
     driver.quit()
 
 def main_function():
-    app_url = "http://localhost:5000"  # change this to your application URL
+    app_url = "http://172.21.0.2:5000"  # change this to your application URL
     if test_scores_service(app_url):
         print("Test passed!")
         sys.exit(0)
