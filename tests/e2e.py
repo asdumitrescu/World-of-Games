@@ -31,6 +31,5 @@ def main_function():
     else:
         print("Test failed.")
         sys.exit(-1)
-
-if __name__ == "__main__":
-    main_function()
+test_scores_service()
+main_function()
