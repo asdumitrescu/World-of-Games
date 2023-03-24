@@ -7,7 +7,7 @@ services:
       dockerfile: ./Scores/Dockerfile
     image: asdumitrescu/wog_scores_flask
     ports:
-      - "8777:5000"
+      - "5000:8777"
     volumes:
       - ./Scores.txt:/app/Scores.txt
       - ./Last_scores.txt:/app/Last_scores.txt
