@@ -37,5 +37,9 @@ def old_score():
         return "<html><head><title>Last Scores Game</title></head><body><h1><div id='score' style='color:red'>" \
             + str(BAD_RETURN_CODE) + "</div></h1>"
 
-# start the Flask app and listen for incoming requests
-app.run(host='0.0.0.0', debug=True, port=5000)
+host = os.environ.get('FLASK_RUN_HOST', '0.0.0.0')
+port = int(os.environ.get('FLASK_RUN_PORT', 5000))
+debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+
+if __name__ == '__main__':
+    app.run(host=host, debug=debug, port=port)
