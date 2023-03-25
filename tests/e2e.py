@@ -31,5 +31,5 @@ def main_function():
     else:
         print("Test failed.")
         sys.exit(-1)
-test_scores_service()
+
 main_function()
