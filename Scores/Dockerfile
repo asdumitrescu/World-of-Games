@@ -1,12 +1,11 @@
 
 # Use the official Python base image
 FROM python:3.9
-
 # Set the working directory
 WORKDIR /app
 
 # Install the dependencies with --no-cache-dir so it wont download the flask app here  ~/.cache/pip
-RUN pip install --no-cache-dir flask
+RUN pip install flask
 
 # Copy the Flask app and the Utils.py file into the container
 COPY Scores/MainScores.py .
