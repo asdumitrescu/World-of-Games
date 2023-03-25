@@ -20,7 +20,7 @@ services:
     command: [ "flask", "run",]
     networks:
       scores_network:
-        ipv4_address: 172.25.0.0
+        ipv4_address: 172.25.0.5
 
 networks:
   scores_network:
@@ -28,4 +28,4 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 172.25.0.0/16
+        - subnet: 172.25.0.5/16
