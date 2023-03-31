@@ -35,7 +35,7 @@ networks:
   scores_network:
     # Use the bridge driver for the network
     driver: bridge
-    # Set the subnet and IPAM driver for the network
+    # Set the subnet and IP Adress Management driver for the network
     ipam:
       driver: default
       config:
