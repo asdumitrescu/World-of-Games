@@ -1,4 +1,4 @@
-# We import the necessary functions and modules
+# We import the necessary functions from the modules 
 
 from Scores.Score import add_score
 from Utils import transfer_and_clear_file, SCORES_FILE_NAME, Screen_cleaner
@@ -112,8 +112,8 @@ def load_game(user_name):
 
                 # Since our function play is boolean when the user win the game, the function will return True
                 # so if game == True: call the score function to add the score in a file
-                # then the screen cleaner function to clean the screen and after that he gets
-                # the repeat menu function imorted from Utils file.
+                # then the screen cleaner function to clean the screen and after that whatever next he gets
+                # the repeat menu function imported from Utils file.
                 if game:
                     add_score(lvl_sel)
                     Screen_cleaner()
@@ -121,7 +121,8 @@ def load_game(user_name):
                 repeat_menu(user_name, lvl_sel, prev_game = game_module, prev_difficulty = lvl_sel)
 
 
-
+             # The else block is the error handling section of the load_game function. It is executed when the user inputs a value that
+             # is not in the game dictionary, i.e., not one of the options presented in the game menu.        
         else:
             print('Oooops Wrong INPUT! Please try entering again numbers from 1 to 3\n')
             Screen_cleaner()
