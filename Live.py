@@ -29,9 +29,9 @@ def load_game(user_name):
 
     # Create a dictionary to map game selections to game modules and function names
     game_dict = {
-        '1': ('MemoryGame_test', 'play', 'Memory Game'),
-        '2': ('GuessGame_test', 'play', 'Guess Game'),
-        '3': ('CurrencyRoulette_test', 'play', 'Currency Roulette')
+        '1': ('MemoryGame', 'play', 'Memory Game'),
+        '2': ('GuessGame', 'play', 'Guess Game'),
+        '3': ('CurrencyRoulette', 'play', 'Currency Roulette')
     }
     prev_game = None
     prev_difficulty = None
