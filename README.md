@@ -73,4 +73,9 @@ The web service is a Flask application that exposes a RESTful API for retrieving
 his end-to-end test is triggered in Jenkins and uses Selenium to open a browser, navigate to the web service, and check that the displayed score
 is between 1 and 1000. If the score is valid, the test passes; otherwise, it fails.
 
+To install the requirements for this project, please run the following command in your terminal:
+
+pip install -r requirements.txt
+
+This will install all the required dependencies, including Flask and Selenium. Make sure you are in the root directory of the project before running this command.
 
