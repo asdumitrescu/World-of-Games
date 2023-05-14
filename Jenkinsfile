@@ -26,9 +26,9 @@ pipeline {
         }
         stage('Finalize') {
             steps {
-                withCredentials([usernamePassword(credentialsId: '64ff5082-093b-4a8a-9547-117f113c544b', passwordVariable: 'DOCKER_HUB_PASSWORD', usernameVariable: 'DOCKER_HUB_USERNAME')]) {
+                withCredentials([usernamePassword(credentialsId: '64ff5082-093b-4a8a-9547-117f113c544b', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     dir('Scores') {
-                        sh 'docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD'
+                        sh 'docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}'
                         sh 'docker-compose down'
                         sh 'docker-compose push'
                     }
