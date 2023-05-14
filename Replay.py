@@ -41,7 +41,6 @@ def repeat_menu(user_name, lvl_sel, prev_game=None, prev_difficulty=None):
 
         elif repeat.lower().startswith('q'):  # check if the user input starts with 'q' to quit the game
             print(f"Was nice to see you {user_name}!!! Thanks for playing my game, see you next time!") #will display a message at the end
-            transfer_and_clear_file("./Scores/Scores.txt", "./Scores/Last_scores.txt") # calling the scores clean and transfer function
             Screen_cleaner() # clear the screen
             exit()   # will exit the program
 

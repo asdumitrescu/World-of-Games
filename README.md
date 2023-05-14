@@ -20,7 +20,6 @@ World of Games is a Python project that can be run on any platform that supports
     * |   |-- MainScores.py
     * |   |-- Score.py
     * |   |-- Scores.txt
-    * |   |-- Last_scores.txt
     * |   |-- docker-compose.yml
   * #### |-- tests/
     * |   |-- e2e.py
@@ -44,7 +43,7 @@ This folder contains the modules of the three games:
 This folder contains the implementation of a Flask web service for keeping track of scores. 
 The implementation includes a Dockerfile that sets up a Python 3.9 environment and installs Flask,
 as well as a docker-compose.yml file that builds and deploys the service. The Dockerfile copies the MainScores.py and Utils.py 
-files into the container, along with the Scores.txt and Last_scores.txt files. The docker-compose.yml file defines
+files into the container, along with the Scores.txt . The docker-compose.yml file defines
 a container named 'flask_app' that mounts local files as volumes, exposes the container's port 5000 to host port 8777,
 and connects to a custom network with a static IP address.
 ***
