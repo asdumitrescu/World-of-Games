@@ -28,7 +28,7 @@ pipeline {
             steps {
                 dir('Scores') {
                     sh 'docker login'
-                    sh 'docker-compose down'
+                    sh 'docker-compose down --remove-orphans'
                     sh 'docker-compose push'
                 }
             }
