@@ -17,12 +17,3 @@ def Screen_cleaner():
         os.system('clear')       # Clear the screen using "clear" command
 
 # This function reads the contents of a source file, writes them to a destination file, and then clears the source file
-def transfer_and_clear_file(src_file, cp_file):
-    with open(src_file, 'r') as scores:         # Open the source file
-        current_score = scores.read().strip()   # Read the contents and remove any whitespace
-
-    with open(cp_file, 'w') as scores:          # Open the destination file
-        scores.write(current_score)             # Write the contents of the source file to the destination file
-
-    with open(src_file, 'w') as scores:         # Open the source file again
-        scores.write('')                        # Clear the contents of the source file
