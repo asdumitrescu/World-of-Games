@@ -8,8 +8,8 @@ World of Games is a collection of three command-line games:
 
 This project also includes a Flask web service for keeping track of scores.
 
-Project Structure
-The project is structured as follows:
+***
+World of Games is a Python project that can be run on any platform that supports Python 3.9 or later. The project is structured as follows:
 * #### World-Of-Games/
   * #### |-- Games/
     * |   |-- CurrencyRoulette.py
@@ -30,15 +30,15 @@ The project is structured as follows:
 * |-- Utils.py
 * |-- Jenkinsfile
 * |-- name.txt
-
+***
 ### Games
 
-This folder contains the implementation of the three games:
+This folder contains the modules of the three games:
 
-CurrencyRoulette.py: A game that involves guessing the value of a random amount of money in a foreign currency.
-GuessGame.py: A game that involves guessing a randomly-generated number.
-MemoryGame.py: A game that involves matching pairs of randomly-generated cards.
-
+1. MemoryGame.py: A game that involves matching pairs of randomly-generated cards.
+2. GuessGame.py: A game that involves guessing a randomly-generated number.
+3. CurrencyRoulette.py: A game that involves guessing the value of a random amount of money in a foreign currency.
+***
 ### Scores
 
 This folder contains the implementation of a Flask web service for keeping track of scores. 
@@ -47,29 +47,38 @@ as well as a docker-compose.yml file that builds and deploys the service. The Do
 files into the container, along with the Scores.txt and Last_scores.txt files. The docker-compose.yml file defines
 a container named 'flask_app' that mounts local files as volumes, exposes the container's port 5000 to host port 8777,
 and connects to a custom network with a static IP address.
-
+***
 ### tests
 
 This folder contains an end-to-end (e2e) test script for testing the web service.
 
-Live.py
+***
+### **Main directory World Of Games files:**
+
+#### **Live.py** 
 This file contains the main menu and game loop for the three games.
+***
+#### **MainGame.py**
 
-MainGame.py
 This file contains the logic for starting a game based on the user's selection.
+***
+#### **Replay.py**
 
-Replay.py
 This file contains the logic for asking the user if they want to play again after a game has ended.
+***
+#### **Utils.py**
 
-Utils.py
 This file contains utility functions used by the games and the web service.
+***
 
-Jenkinsfile
+#### Jenkinsfile
+
 This file contains the pipeline for building, testing, and deploying the Scores service and running end-to-end tests using the e2e.py file.
+***
+#### **name.txt**
 
-name.txt
 This file contains the user's name.
-
+***
 ### Web Service
 
 The web service is a Flask application that exposes a RESTful API for retrieving scores. The API has two endpoints:
@@ -80,7 +89,32 @@ The web service is a Flask application that exposes a RESTful API for retrieving
 
 This end-to-end test is triggered in Jenkins and uses Selenium to open a browser, navigate to the web service, and check that the displayed score
 is between 1 and 1000. If the score is valid, the test passes; otherwise, it fails.
+***
+## **How to Use**
 
+To start the games, please run the following command in your terminal after you navigate to
+the main directory of the project:
+
+### python MainGame.py
+
+***
+**In case first option doesn't work try**:
+***
+### python3 MainGame.py  
+### "python3" you can use for the other modules this option in case using the normal command wont work. 
+
+This will start the main menu, where you have too enter your name and where you will
+select the game you want to play with the desired difficulty.
+
+To start the web service, please run the following command in your terminal after navigating to Scores folder:
+
+### python MainScores.py
+***
+To run the end-to-end test, please run the following command in your terminal after navigating to tests folder
+and after you have the web service running locally: 
+
+### python e2e.py
+***
 ### Project Requirments
 
 To install the requirements for this project, please run the following command in your terminal:
@@ -89,4 +123,5 @@ To install the requirements for this project, please run the following command i
 
 This will install all the required dependencies, including Flask and Selenium. 
 Make sure you are in the root directory of the project before running this command.
-
+***
+## We hope you enjoy playing World of Games!
