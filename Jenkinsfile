@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Finalize') {
             steps {
-                withCredentials([usernamePassword(credentialsId: '64ff5082-093b-4a8a-9547-117f113c544b', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                withCredentials([usernamePassword(credentialsId: '4d8ed3c0-10b3-48e8-b533-14530b2329ff', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                     dir('Scores') {
                         sh "echo ${DOCKER_PASSWORD} | docker-compose exec -T flask_app sh -c 'docker login -u ${DOCKER_USERNAME} --password-stdin'"
 
