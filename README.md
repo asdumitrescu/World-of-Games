@@ -72,7 +72,10 @@ This file contains utility functions used by the games and the web service.
 
 #### Jenkinsfile
 
-This file contains the pipeline for building, testing, and deploying the Scores service and running end-to-end tests using the e2e.py file.
+This file contains the pipeline for building, testing, 
+and deploying the Scores service and running end-to-end tests 
+using the e2e.py file and deleting the containers and all the other services and dependecies created in the pipeline,
+finally pushing the image to docker hub.
 ***
 #### **name.txt**
 
