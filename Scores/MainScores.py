@@ -1,6 +1,6 @@
 import os  # import the "os" module
 from flask import Flask  # import the "Flask" class from the "flask" module
-from Utils import BAD_RETURN_CODE, LAST_SCORES_FLASK, SCORES_FILE_FLASK  # import some constants from the "Utils" module
+from Utils import BAD_RETURN_CODE, SCORES_FILE_FLASK  # import some constants from the "Utils" module
 
 app = Flask(__name__)  # create a new Flask app instance
 

@@ -80,39 +80,45 @@ This file contains the user's name.
 ***
 ### Web Service
 
-The web service is a Flask application that exposes a RESTful API for retrieving scores. The API has two endpoints:
+The web service is a Flask application that runs an html code and will show the scores inside a browser.
 
-/: Accepts a GET request and returns an HTML page that displays the user's name and score from the "name.txt" and "scores.txt" files, respectively.
+The main route (/): Accepts a GET request and returns 
+an HTML page that displays the user's name and score from 
+the "name.txt" and "scores.txt" files, respectively.
 
-/last_score: Accepts a GET request and returns an HTML page that displays the user's name and last score from the "last_score.txt" file.
+It can be started by running the MainScores.py file located in Scores folder as following:
 
-This end-to-end test is triggered in Jenkins and uses Selenium to open a browser, navigate to the web service, and check that the displayed score
-is between 1 and 1000. If the score is valid, the test passes; otherwise, it fails.
+Open terminal ===> Navigate to Scores folder ===> Run the following command: 
+
+#### python3 MainScores.py
+
+After running the above command you can access it here: http://localhost:5000/
+
+It can be also runned inside a docker container by navigating to Scores folder and running the following command:
+
+#### docker-compose build
+
+#### docker-compose up
+
+You can access it after running the above commands here: http://172.25.0.5:5000
+
 ***
 ## **How to Use**
 
 To start the games, please run the following command in your terminal after you navigate to
 the main directory of the project:
 
-### python MainGame.py
-
-***
-**In case first option doesn't work try**:
-***
-### python3 MainGame.py  
-### "python3" you can use for the other modules this option in case using the normal command wont work. 
+#### python3 MainGame.py  
 
 This will start the main menu, where you have too enter your name and where you will
 select the game you want to play with the desired difficulty.
 
-To start the web service, please run the following command in your terminal after navigating to Scores folder:
 
-### python MainScores.py
 ***
 To run the end-to-end test, please run the following command in your terminal after navigating to tests folder
 and after you have the web service running locally: 
 
-### python e2e.py
+#### python3 e2e.py
 ***
 ### Project Requirments
 
