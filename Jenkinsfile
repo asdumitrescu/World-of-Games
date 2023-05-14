@@ -26,14 +26,13 @@ pipeline {
         }
         stage('Finalize') {
             steps {
-
-                    dir('Scores') {
-                        sh 'docker login'
-                        sh 'docker-compose down'
-                        sh 'docker-compose push'
-                    }
+                dir('Scores') {
+                    sh 'docker login'
+                    sh 'docker-compose down'
+                    sh 'docker-compose push'
                 }
             }
         }
     }
 }
+
