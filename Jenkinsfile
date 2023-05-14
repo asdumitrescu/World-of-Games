@@ -24,14 +24,13 @@ pipeline {
                 }
             }
         }
-
         stage('Finalize') {
             steps {
-            withCredentials([usernamePassword(credentialsId: '64ff5082-093b-4a8a-9547-117f113c544b', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-                dir('Scores') {
-                    sh "echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USERNAME} --password-stdin"
-                    sh 'docker-compose down'
-                    sh 'docker-compose push'
+                withCredentials([usernamePassword(credentialsId: '64ff5082-093b-4a8a-9547-117f113c544b', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                    dir('Scores') {
+                        sh "echo ${DOCKER_PASSWORD} | docker login -u ${DOCKER_USERNAME} --password-stdin"
+                        sh 'docker-compose down'
+                        sh 'docker-compose push'
                     }
                 }
             }
