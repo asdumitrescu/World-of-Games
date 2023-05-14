@@ -1,26 +1,25 @@
 pipeline {
-    agent any # Use any available agent to run the pipeline
-
-    stages { # Define the stages in the pipeline
-        stage('Build') { # First stage: Build
+    agent any
+    stages {
+        stage('Build') {
             steps {
-                dir('Scores') { # Change to the 'Scores' directory
-                    sh 'docker-compose build' # Build the Docker images defined in the docker-compose.yml file
+                dir('Scores') {
+                    sh 'docker-compose build'
                 }
             }
         }
 
-        stage('Run') { # Second stage: Run
+        stage('Run') {
             steps {
-                dir('Scores') { # Change to the 'Scores' directory
-                    sh 'docker-compose up -d' # Start the containers in detached mode (-d)
+                dir('Scores') {
+                    sh 'docker-compose up -d'
                 }
             }
         }
 
-        stage('Test') { # Third stage: Test
+        stage('Test') {
             steps {
-                dir('tests') { # Change to the 'tests' directory
+                dir('tests') {
                     sh 'docker-compose exec flask_app python3 e2e.py'
                 }
             }
@@ -28,10 +27,10 @@ pipeline {
         stage('Finalize') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'DOCKER_HUB_PASSWORD', usernameVariable: 'DOCKER_HUB_USERNAME')]) {
-                    dir('Scores') { # Change to the 'Scores' directory
+                    dir('Scores') {
                         sh 'docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD'
-                        sh 'docker-compose down' # Stop and remove the containers
-                        sh 'docker-compose push' Push the built images to a Docker registry
+                        sh 'docker-compose down'
+                        sh 'docker-compose push'
                     }
                 }
             }
