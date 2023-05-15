@@ -46,8 +46,8 @@ This folder contains the modules of the three games:
 
                  The computer will generate a random number between 1 to the difficulty 
                  level selected by the user and you have to guess which number the computer generated.
-3. CurrencyRoulette.py: A game that involves guessing the value of a random amount of Shekels that it can be from 1 - 100
-                        into dollar currency.
+
+#### 3. CurrencyRoulette.py: A game that involves guessing the value of a random amount of Shekels that it can be from 1 - 100into dollar currency.
                         
 ***
 ### Scores
