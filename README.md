@@ -69,10 +69,10 @@ and connects to a custom network with a static IP address.
 This folder contains an end-to-end (e2e) test script for testing the web service.
 The e2e.py file uses Selenium to open a browser and navigate to the web service's main route.
 
-To run the end-to-end test, please run the following command in your terminal after navigating to tests folder
-and after you have the web service running locally: 
+**To run the end-to-end test, please run the following command in your terminal after navigating to tests folder
+and _after you have the web service running locally_:** 
 
-#### python3 e2e.py
+    python3 e2e.py
 ***
 ### **Main directory World Of Games files:**
 
