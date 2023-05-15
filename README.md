@@ -34,9 +34,21 @@ World of Games is a Python project that can be run on any platform that supports
 
 This folder contains the modules of the three games:
 
-1. MemoryGame.py: A game that involves matching pairs of randomly-generated cards.
-2. GuessGame.py: A game that involves guessing a randomly-generated number.
-3. CurrencyRoulette.py: A game that involves guessing the value of a random amount of money in a foreign currency.
+#### 1. MemoryGame.py: A game that involves remembering the randomly-generated number shown on the screen.
+
+                  The computer will give random numbers from 1 to 100 in the amount of difficulty the user chose and 
+                  will show it on the terminal for 0.7 seconds then the terminal will clear.
+                  Example: 23 42 50 98       
+                  Last example was for difficulty level 4 selected.
+                  And the user will have to remember the numbers and enter them down in the same order as shown on the screen.
+
+#### 2. GuessGame.py: A game that involves guessing a number between 1 - Difficulty level selected.
+
+                 The computer will generate a random number between 1 to the difficulty 
+                 level selected by the user and you have to guess which number the computer generated.
+3. CurrencyRoulette.py: A game that involves guessing the value of a random amount of Shekels that it can be from 1 - 100
+                        into dollar currency.
+                        
 ***
 ### Scores
 
