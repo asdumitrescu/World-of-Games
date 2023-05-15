@@ -9,7 +9,9 @@ World of Games is a collection of three command-line games:
 This project also includes a Flask web service for keeping track of scores.
 
 ***
-World of Games is a Python project that can be run on any platform that supports Python 3.9 or later. The project is structured as follows:
+World of Games is a Python project that can be run on any platform that supports Python 3.9 or later. 
+
+The project is structured as follows:
 * #### World-Of-Games/
   * #### |-- Games/
     * |   |-- CurrencyRoulette.py
@@ -36,18 +38,21 @@ This folder contains the modules of the three games:
 
 #### 1. MemoryGame.py: A game that involves remembering the randomly-generated number shown on the screen.
 
-                  The computer will give random numbers from 1 to 100 in the amount of difficulty the user chose and 
-                  will show it on the terminal for 0.7 seconds then the terminal will clear.
-                  Example: 23 42 50 98       
-                  Last example was for difficulty level 4 selected.
-                  And the user will have to remember the numbers and enter them down in the same order as shown on the screen.
+  The computer will give random numbers from 1 to 100 in the amount of difficulty the user chose and 
+  will show it on the terminal for 0.7 seconds then the terminal will clear.
+  Example: 23 42 50 98       
+  Last example was for difficulty level 4 selected.
+  And the user will have to remember the numbers and enter them down in the same order as shown on the screen.
 
 #### 2. GuessGame.py: A game that involves guessing a number between 1 - Difficulty level selected.
 
-                 The computer will generate a random number between 1 to the difficulty 
-                 level selected by the user and you have to guess which number the computer generated.
+ The computer will generate a random number between 1 to the difficulty 
+ level selected by the user and you have to guess which number the computer generated.
 
-#### 3. CurrencyRoulette.py: A game that involves guessing the value of a random amount of Shekels that it can be from 1 - 100into dollar currency.
+#### 3. CurrencyRoulette.py: A game that involves guessing the value of a random amount of Dollars into Shekels.
+ The computer will generate a random amount of Dollars between 1 to 100 and you 
+ have to guess the value of that number multiplied by the current value of one Dollar in Shekels.
+ The computer will also give you a hint by showing you the value of the Dollar in Shekels.
                         
 ***
 ### Scores
@@ -62,7 +67,12 @@ and connects to a custom network with a static IP address.
 ### tests
 
 This folder contains an end-to-end (e2e) test script for testing the web service.
+The e2e.py file uses Selenium to open a browser and navigate to the web service's main route.
 
+To run the end-to-end test, please run the following command in your terminal after navigating to tests folder
+and after you have the web service running locally: 
+
+#### python3 e2e.py
 ***
 ### **Main directory World Of Games files:**
 
@@ -93,7 +103,7 @@ finally pushing the image to docker hub.
 
 This file contains the user's name.
 ***
-### Web Service
+### The Flask Web Service (Scores)
 
 The web service is a Flask application that runs an html code and will show the scores inside a browser.
 
@@ -103,43 +113,39 @@ the "name.txt" and "scores.txt" files, respectively.
 
 It can be started by running the MainScores.py file located in Scores folder as following:
 
-Open terminal ===> Navigate to Scores folder ===> Run the following command: 
+#### Open terminal ===> Navigate to Scores folder ===> Run the following command: 
 
-#### python3 MainScores.py
+    python3 MainScores.py
 
 After running the above command you can access it here: http://localhost:5000/
 
-It can be also runned inside a docker container by navigating to Scores folder and running the following command:
+#### It can be also runned inside a docker container by navigating to Scores folder and running the following command:
 
-#### docker-compose build
+    docker-compose build
 
-#### docker-compose up
+    docker-compose up -d 
 
 You can access it after running the above commands here: http://172.25.0.5:5000
 
 ***
 ## **How to Use**
 
-To start the games, please run the following command in your terminal after you navigate to
-the main directory of the project:
+**To start the games, please run the following command in your terminal after you navigate to
+the main directory of the project:**
 
-#### python3 MainGame.py  
+    python3 MainGame.py  
 
 This will start the main menu, where you have too enter your name and where you will
 select the game you want to play with the desired difficulty.
 
 
-***
-To run the end-to-end test, please run the following command in your terminal after navigating to tests folder
-and after you have the web service running locally: 
 
-#### python3 e2e.py
 ***
 ### Project Requirments
 
-To install the requirements for this project, please run the following command in your terminal:
+**To install the requirements for this project, please run the following command in your terminal:**
 
-**pip install -r requirements.txt**
+    pip install -r requirements.txt
 
 This will install all the required dependencies, including Flask and Selenium. 
 Make sure you are in the root directory of the project before running this command.
