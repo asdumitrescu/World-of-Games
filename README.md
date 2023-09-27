@@ -106,20 +106,11 @@ This file contains the user's name.
 ### The Flask Web Service (Scores)
 
 The web service is a Flask application that runs an html code and will show the scores inside a browser.
-
 The main route (/): Accepts a GET request and returns 
 an HTML page that displays the user's name and score from 
 the "name.txt" and "scores.txt" files, respectively.
 
-It can be started by running the MainScores.py file located in Scores folder as following:
-
-#### Open terminal ===> Navigate to Scores folder ===> Run the following command: 
-
-    python3 MainScores.py
-
-After running the above command you can access it here: http://localhost:5000/
-
-#### It can be also runned inside a docker container by navigating to Scores folder and running the following command:
+#### It can be runned inside a docker container by navigating to Scores folder and running the following command:
 
     docker-compose build
 
