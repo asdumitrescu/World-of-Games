@@ -1,7 +1,7 @@
 # We import the necessary functions from the modules 
 
 from Scores.Score import add_score
-from Utils import transfer_and_clear_file, SCORES_FILE_NAME, Screen_cleaner
+from Utils import Screen_cleaner
 from Replay import repeat_menu
 
 import importlib

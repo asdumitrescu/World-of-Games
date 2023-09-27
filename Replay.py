@@ -1,7 +1,7 @@
 # First we import some modules from the python library that will be used in this module
 import importlib
 import Live
-from Utils import Screen_cleaner, transfer_and_clear_file
+from Utils import Screen_cleaner
 
 
 #
